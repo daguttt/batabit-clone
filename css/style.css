@@ -1,0 +1,576 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* ============================================= */
+/* VARIABLES Y ESTILOS GENERALES */
+/* ============================================= */
+:root {
+	--shadow: 0 4px 8px 0 #59491e29;
+	--off-white: #f4f8f7;
+	--warm-black: #201e1c;
+	--warm-black2: #282623;
+	--soft-orange: #ffe9d4;
+	--bitcoin-orange: #f7931a;
+	--blue: #1a9af7;
+	--soft-blue: #e7f5ff;
+	--high-gray: #808080;
+	--mid-gray: #757575;
+	--low-gray: #b5b0ac;
+	--light-hover: #efefef;
+	--shadow-hover: 0 4px 8px #ffffff;
+}
+
+.title {
+	max-width: 466px;
+	margin: 0 16px;
+	font-family: DM Sans;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.625rem;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.subtitle {
+	font-family: DM Sans;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.125rem;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.text {
+	font-family: DM Sans;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.125rem;
+	letter-spacing: 0em;
+	text-align: center;
+	margin: 0 1.2rem;
+}
+
+body {
+	background: var(--off-white);
+	overflow-x: hidden;
+}
+
+/* ============================================= */
+/* HEADER */
+/* ============================================= */
+.header {
+	background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+	height: 20.625rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+}
+.logo {
+	width: 100%;
+	height: 28px;
+	margin: 2.5rem 0 1.25rem;
+}
+
+.header__title {
+	color: var(--off-white);
+	margin-bottom: 20px;
+}
+.header__text {
+	color: var(--soft-orange);
+	margin-bottom: 20px;
+}
+.cta {
+	position: absolute;
+	bottom: -20px;
+	background: var(--off-white);
+	box-shadow: var(--shadow);
+	height: 3rem;
+	width: 14.375rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: background .2s, box-shadow .2s;
+}
+.cta:hover {
+	background: var(--light-hover);
+	box-shadow: var(--shadow-hover);
+	
+}
+.cta__text {
+	color: var(--warm-black);
+	margin: 0;
+}
+.flecha-abajo {
+	width: 12px;
+	height: 12px;
+}
+
+/* ============================================= */
+/* MAIN */
+/* ============================================= */
+.main {
+	padding-top: 60px;
+}
+.main section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/* ============================================= */
+/* Exchange */
+.exchange-rates-section {
+	background: transparent;
+}
+
+.bitcoin-image {
+	margin-bottom: 40px;
+}
+.exchange-rates-section__title {
+	margin: 0 0 24px;
+}
+.exchange-rates-section__text {
+	margin: 0 0 48px;
+	color: var(--low-gray);
+}
+/* Exchange slider */
+.exchange__slider-container {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	margin: 0 0 64px;
+	padding-bottom: 20px;
+}
+.exchange__card-container {
+	scroll-snap-align: center;
+	position: relative;
+	min-width: 220px;
+	width: 60%;
+	margin: 0 2.5rem;
+	padding: 0 1.125rem;
+}
+.exchange__card {
+	display: grid;
+	grid-row-gap: 20px;
+	align-content: center;
+	background: #fff;
+	border-radius: 8px;
+}
+/* Coins container */
+.coins-container img {
+	height: 12px;
+}
+.coins {
+	grid-template-columns: 4fr 2fr 12px;
+}
+.flecha-derecha,
+.flecha-izquierda {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+}
+.flecha-derecha {
+	right: -9%;
+	top: 50%;
+}
+.flecha-izquierda {
+	left: -8%;
+}
+.card__title {
+	font-family: DM Sans;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.4375rem;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.coins__title {
+	grid-column: 3 span;
+	color: var(--bitcoin-orange);
+}
+.card__text {
+	margin-bottom: 20px;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.1875rem;
+	letter-spacing: -0.02em;
+	text-align: left;
+	color: var(--low-gray);
+}
+.card__number {
+	font-family: Inter;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.0625rem;
+	letter-spacing: -0.02em;
+	text-align: center;
+	color: var(--mid-gray);
+}
+.coins__number {
+	margin-bottom: 23px;
+}
+.icons img {
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-bottom: 1.4375rem;
+}
+.icons img:first-child {
+	margin: 5px 0 23px;
+}
+.current span {
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.current {
+	padding: 8px;
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+	border-radius: 8px;
+	background: var(--soft-orange);
+}
+/* Commissions container */
+/* Commissions */
+.commissions {
+	grid-template-columns: repeat(2, 1fr);
+}
+.commissions__title {
+	color: var(--blue);
+	grid-column: 2 span;
+}
+.current--commissions {
+	background: var(--soft-blue);
+	margin-right: 0.875rem;
+}
+
+/* ============================================= */
+/* Product features */
+.potato {
+	position: absolute;
+	top: -1.5%;
+}
+.product-features-section {
+	position: relative;
+	background: var(--warm-black);
+	padding: 64px 0 64px;
+}
+.product-features-section__title {
+	color: var(--off-white);
+	margin-bottom: 24px;
+}
+.product-features-section__text {
+	color: var(--high-gray);
+	margin-bottom: 32px;
+}
+.features-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.feature-container {
+	width: 90%;
+	margin: 16px;
+	min-width: 152px;
+	padding: 0.625rem;
+	background: var(--warm-black2);
+	border-radius: 0.5rem;
+}
+.feature__subtitle {
+	font-family: DM Sans;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.125rem;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--off-white);
+}
+.feature__text {
+	text-align: left;
+	margin: 0;
+	color: var(--high-gray);
+}
+.feature__icon,
+.feature__subtitle {
+	margin-bottom: 0.3125rem;
+}
+/* ============================================= */
+/* Image */
+.image-section {
+	background-image: url(https://i.imgur.com/fMMcanx.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 387px;
+}
+.image-section__title {
+	padding: 65px 0 0;
+	color: var(--off-white);
+}
+/* ============================================= */
+/* Plans */
+.plans-section {
+	padding: 64px 0;
+	background: transparent;
+}
+.plans__title {
+	margin-bottom: 1.5rem;
+}
+.plans__text {
+	margin-bottom: 2.125rem;
+	color: var(--mid-gray);
+}
+.plans-container-slider {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x proximity;
+	scroll-behavior: smooth;
+	height: 280px;
+	padding: 10px 0 0;
+}
+.plans__plan {
+	scroll-snap-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 250px;
+	width: 70%;
+	min-width: 190px;
+	max-width: 223px;
+	padding: 24px 0;
+	margin: 0 0.5rem;
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+}
+.plans__plan--active {
+	position: relative;
+	overflow-y: visible;
+	margin: 0 4px;
+}
+.plans__plan--active::before {
+	position: absolute;
+	top: -3%;
+	left: 24%;
+	line-height: 0.9375rem;
+	content: "Recomendado";
+	padding: 5px;
+	text-align: center;
+	letter-spacing: 0em;
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	background: var(--bitcoin-orange);
+	color: var(--off-white);
+	border-radius: 8px;
+}
+.plan__title {
+	width: 100%;
+	margin-bottom: 8px;
+}
+.plan__price-container {
+	width: 36%;
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: center;
+}
+.dollar-price {
+	position: relative;
+	font-family: Inter;
+	font-size: 52px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 63px;
+	letter-spacing: -0.08em;
+	text-align: left;
+}
+.dollar-price span {
+	position: absolute;
+	left: -15%;
+	top: 10%;
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.plan__text {
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+	margin: 0 16px 16px;
+	color: var(--mid-gray);
+}
+.plan__button-container {
+	width: 80%;
+	border: 2px solid var(--bitcoin-orange);
+	border-radius: 4px;
+	padding: 15px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+}
+.button__text {
+	font-family: DM Sans;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+/* ============================================= */
+/* Questions Section */
+/* ============================================= */
+
+.questions-section {
+	margin-bottom: 64px;
+}
+.questions-section__title {
+	margin: 0 16px 32px;
+}
+.questions {
+	max-width: 430px;
+}
+.questions__question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 16px;
+	width: 100%;
+}
+.questions__answer {
+	display: none;
+	width: 70%;
+	margin: 0 auto 16px;
+}
+.questions__answer p {
+	font-family: DM Sans;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25rem;
+	letter-spacing: -0.02em;
+	text-align: left;
+	color: var(--mid-gray);
+}
+.questions__text {
+	width: 85%;
+	max-width: 344px;
+	text-align: left;
+	color: var(--warm-black);
+}
+.questions__flecha-abajo {
+	display: inline;
+	margin: 0 30px 0 20px;
+}
+.questions__flecha-arriba {
+	display: none;
+}
+.questions__flecha-abajo,
+.questions__flecha-arriba {
+	cursor: pointer;
+}
+/* ============================================= */
+/* FOOTER */
+/* ============================================= */
+.footer {
+	background: var(--bitcoin-orange);
+	height: 150px;
+	padding: 0 65px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.links {
+	height: 70px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer a {
+	width: 100%;
+	text-decoration: none;
+	color: var(--off-white);
+	text-align: left;
+}
+.branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.copyright {
+	font-family: Inter;
+	font-size: 8px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: var(--off-white);
+}
+
+/* ============================================= */
+/* ============================================= */
+/* RESPONSIVE */
+/* ============================================= */
+/* ============================================= */
+/* Iphone 8 */
+@media screen and (min-width: 375px) {
+	.exchange__card-container {
+		margin: 0 5rem;
+		padding: 0;
+	}
+	.flecha-derecha {
+		right: -20%;
+	}
+	.flecha-izquierda {
+		left: -20%;
+	}
+}
+/* Iphone 11 Pro Max */
+@media screen and (min-width: 414px) {
+	.exchange__card-container {
+		min-width: 250px;
+		margin: 0 4.5rem;
+		padding: 0;
+	}
+	.flecha-derecha {
+		right: -20%;
+	}
+	.flecha-izquierda {
+		left: -20%;
+	}
+	.plans__plan {
+		scroll-snap-align: none;
+	}
+}

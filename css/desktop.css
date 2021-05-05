@@ -1,0 +1,28 @@
+html, body {
+   font-size: 24px;
+}
+.title {
+   max-width: 500px;
+   height: 126px;
+   margin: 0 300px;
+}
+.plans__text {
+   margin: 0 12.1rem 2.2rem;
+}
+@media screen and (min-width: 1520px) {
+   .title {
+      max-width: 700px;
+      height: auto;
+      margin: 50px 450px;
+   }
+   .header__text {
+      max-width: 450px;
+      margin-bottom: 102px;
+   }
+   .image-section {
+      max-height: 500px;
+   }
+   .plans__text {
+      margin: 0 12.1rem 2.2rem;
+   }
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Batabit - Responsive design</title>
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- ----------------------------------------->
+		<!-- STYLES -->
+		<!-- Mobile -->
+		<link rel="stylesheet" href="./css/style.css" />
+		<!-- Tablet-->
+		<link
+			rel="stylesheet"
+			href="./css/tablet.css"
+			media="screen and (min-width: 600px)"
+		/>
+		<!-- Desktop -->
+		<link
+			rel="stylesheet"
+			href="./css/desktop.css"
+			media="screen and (min-width: 1152px)"
+		/>
+		<!-- ---------------------------------------->
+	</head>
+	<body>
+		<header class="header container">
+			<img class="logo" src="./assets/Logo.svg" alt="Logo Batabit" />
+			<h1 class="title header__title">
+				La próxima revolución en el intercambio de criptomonedas.
+			</h1>
+			<p class="text header__text">
+				Batabit ayuda a navegar entre los diferentes precios y tendencias.
+			</p>
+			<button class="cta" id="cta">
+				<span class="cta__text text">Conoce Nuestros Planes</span>
+				<img src="./assets/flecha-abajo.svg" alt="Down arrow" class="flecha-abajo"></button>
+			</div>
+		</header>
+		<!-- ---------------------------------------->
+		<!-- MAIN -->
+		<!-- ---------------------------------------->
+		<main class="main">
+			<!-- ---------------------------------------->
+			<!-- Exchange Rates Section -->
+			<!-- ---------------------------------------->
+			<section class="exchange-rates-section">
+				<img
+					src="./assets/Bitcoin.svg"
+					alt="Bitcoin image"
+					class="bitcoin-image"
+				/>
+				<h2 class="exchange-rates-section__title title">
+					Visibilizamos todas las tasas de cambio.
+				</h2>
+				<p class="exchange-rates-section__text text">
+					Traemos información en tiempo real de las casas de cambio y las
+					monedas más importantes del mundo.
+				</p>
+				<!-- Exchange slider -->
+				<div class="exchange__slider-container">
+					<!-- Coins container -->
+					<div class="coins-container exchange__card-container" id="coins">
+						<!-- Coins -->
+						<div class="coins exchange__card">
+							<h3 class="coins__title card__title">Monedas</h3>
+							<div class="currencies">
+								<p class="coins__text card__text">Bitcoin</p>
+								<p class="coins__text card__text">Ethereum</p>
+								<p class="coins__text card__text">Ripple</p>
+								<p class="coins__text card__text">Stellar</p>
+							</div>
+							<div class="prizes">
+								<p class="coins__number card__number">$ 1.96</p>
+								<p class="coins__number card__number">$ 1.96</p>
+								<p class="coins__number card__number">$ 1.96</p>
+								<p class="coins__number card__number">$ 1.96</p>
+							</div>
+							<div class="icons">
+								<img
+									src="./assets/trending-down.svg"
+									alt="Trending down"
+								/>
+								<img
+									src="./assets/trending-up.svg"
+									alt="Trending down"
+								/>
+								<img
+									src="./assets/trending-down.svg"
+									alt="Trending down"
+								/>
+								<img
+									src="./assets/trending-down.svg"
+									alt="Trending down"
+								/>
+							</div>
+						</div>
+						<!-- Right arrow -->
+						<img
+							src="./assets/flecha-derecha.svg"
+							alt="Right arrow"
+							class="flecha-derecha"
+						/>
+						<p class="current"><span>Actualizado</span> 19 Julio 23:48</p>
+					</div>
+					<!-- Commissions container -->
+					<div class="commissions-container exchange__card-container" id="commissions">
+						<!-- Left arrow -->
+						<img
+							src="./assets/flecha-izquierda.svg"
+							alt="Left arrow"
+							class="flecha-izquierda"
+						/>
+						<!-- Commissions -->
+						<div class="commissions exchange__card">
+							<h3 class="commissions__title card__title">Comisiones</h3>
+							<div class="currencies">
+								<p class="card__text">Bitcoin</p>
+								<p class="card__text">Ethereum</p>
+								<p class="card__text">Ripple</p>
+								<p class="card__text">Stellar</p>
+							</div>
+							<div class="prizes">
+								<p class="coins__number card__number">$ 12.96</p>
+								<p class="coins__number card__number">$ 13.07</p>
+								<p class="coins__number card__number">$ 13.15</p>
+								<p class="coins__number card__number">$ 14.96</p>
+							</div>
+						</div>
+						<p class="current current--commissions">
+							<span>Actualizado</span> 19 Julio 23:48
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- ---------------------------------------->
+			<!-- Product Features Section -->
+			<!-- ---------------------------------------->
+			<section class="product-features-section">
+				<img
+					src="./assets/potato.svg"
+					alt="Batabit image logo"
+					class="potato"
+				/>
+				<h2 class="product-features-section__title title">
+					Creamos un producto sin comparación.
+				</h2>
+				<p class="product-features-section__text text">
+					Confiable y diseñado para su uso diario.
+				</p>
+
+				<div class="features-container">
+					<div class="feature-container">
+						<img
+							src="./assets/clock.svg"
+							alt="Time icon"
+							class="feature__icon"
+						/>
+						<h3 class="feature__subtitle">Tiempo real</h3>
+						<p class="feature__text text">
+							Nuestro API toma información minuto a minuto sobre las tasas
+							que más determinan el comportamiento.
+						</p>
+					</div>
+					<div class="feature-container">
+						<img
+							src="./assets/eye.svg"
+							alt="Time icon"
+							class="feature__icon"
+						/>
+						<h3 class="feature__subtitle">No hay tasas escondidas</h3>
+						<p class="feature__text text">
+							Ni en la compra o al momento de exit, Batabit siempre te
+							muestra el costo real de lo que estás adquiriendo.
+						</p>
+					</div>
+					<div class="feature-container">
+						<img
+							src="./assets/dollar-sign.svg"
+							alt="Time icon"
+							class="feature__icon"
+						/>
+						<h3 class="feature__subtitle">Compara monedas</h3>
+						<p class="feature__text text">
+							Nuestro API toma información minuto a minuto sobre las tasas
+							que más determinan el comportamiento.
+						</p>
+					</div>
+					<div class="feature-container">
+						<img
+							src="./assets/check-circle.svg"
+							alt="Time icon"
+							class="feature__icon"
+						/>
+						<h3 class="feature__subtitle">Información confiable</h3>
+						<p class="feature__text text">
+							Nuestro API toma información minuto a minuto sobre las tasas
+							que más determinan el comportamiento.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- ---------------------------------------->
+			<!-- Image Section -->
+			<!-- ---------------------------------------->
+			<section class="image-section">
+				<h2 class="image-section__title title">Conócelo hoy</h2>
+			</section>
+			<!-- ---------------------------------------->
+			<!-- Plans Section -->
+			<!-- ---------------------------------------->
+			<section class="plans-section" id="plans">
+				<h2 class="plans__title title">
+					Escoge el plan que mejor se ajuste a ti.
+				</h2>
+				<p class="plans__text text">
+					Cualquier plan te da acceso completo a nuestra platarforma
+				</p>
+				<div class="plans-container-slider">
+					<div class="plans__plan">
+						<h2 class="plan__title subtitle">Pago Anual</h2>
+						<div class="plan__price-container">
+							<h3 class="dollar-price"><span>$</span>5</h3>
+						</div>
+						<p class="plan__text">
+							*Ahorras $129 comparado al plan mensual.
+						</p>
+						<div class="plan__button-container">
+							<p class="button__text">Escoger este</p>
+							<img
+								src="./assets/arrow-right-orange.svg"
+								alt="Arrow orange"
+							/>
+						</div>
+					</div>
+					<div class="plans__plan plans__plan--active">
+						<h2 class="plan__title subtitle">Pago Anual</h2>
+						<div class="plan__price-container">
+							<h3 class="dollar-price"><span>$</span>49</h3>
+						</div>
+						<p class="plan__text">
+							*Ahorras $129 comparado al plan mensual.
+						</p>
+						<div class="plan__button-container">
+							<p class="button__text">Escoger este</p>
+							<img
+								src="./assets/arrow-right-orange.svg"
+								alt="Arrow orange"
+							/>
+						</div>
+					</div>
+					<div class="plans__plan">
+						<h2 class="plan__title subtitle">Pago Anual</h2>
+						<div class="plan__price-container">
+							<h3 class="dollar-price"><span>$</span>99</h3>
+						</div>
+						<p class="plan__text">
+							*Ahorras $129 comparado al plan mensual.
+						</p>
+						<div class="plan__button-container">
+							<p class="button__text">Escoger este</p>
+							<img
+								src="./assets/arrow-right-orange.svg"
+								alt="Arrow orange"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ---------------------------------------->
+			<!-- Questions section -->
+			<!-- ---------------------------------------->
+			<section class="questions-section">
+				<h2 class="title questions-section__title">
+					¿Preguntas? Aquí estamos para ti.
+				</h2>
+				<div class="questions">
+					<div class="questions-container">
+						<div class="questions__question">
+							<p class="questions__text text">
+								¿Batabit me permite hacer compras en su plataforma?
+							</p>
+							<img src="./assets/flecha-abajo.svg" alt="Down arrow" class="questions__flecha-abajo flecha-abajo"></img>
+							<img src="./assets/flecha-arriba.svg" alt="Up arrow" class="questions__flecha-arriba">
+						</div>
+						<div class="questions__answer">
+							<p>No. Batabit es una plataforma exclusivamente para consulta de información y toma de decisiones. Todavía no ofrecemos servicios de compra o venta.</p>
+						</div>
+					</div>
+					<div class="questions-container">
+						<div class="questions__question">
+							<p class="questions__text text">
+								¿Qué es bitcoin?
+							</p>
+							<img src="./assets/flecha-abajo.svg" alt="Down arrow" class="questions__flecha-abajo flecha-abajo"></img>
+							<img src="./assets/flecha-arriba.svg" alt="Up arrow" class="questions__flecha-arriba">
+						</div>
+						<div class="questions__answer">
+							<p>No. Batabit es una plataforma exclusivamente para consulta de información y toma de decisiones. Todavía no ofrecemos servicios de compra o venta.</p>
+						</div>
+					</div>
+					<div class="questions-container">
+						<div class="questions__question">
+							<p class="questions__text text">
+								¿Cómo puedo hacer una transacción en bitcoin?
+							</p>
+							<img src="./assets/flecha-abajo.svg" alt="Down arrow" class="questions__flecha-abajo flecha-abajo"></img>
+							<img src="./assets/flecha-arriba.svg" alt="Up arrow" class="questions__flecha-arriba">
+						</div>
+						<div class="questions__answer">
+							<p>No. Batabit es una plataforma exclusivamente para consulta de información y toma de decisiones. Todavía no ofrecemos servicios de compra o venta.</p>
+						</div>
+					</div>
+					<div class="questions-container">
+						<div class="questions__question">
+							<p class="questions__text text">
+								¿Cómo aseguro mis compras?
+							</p>
+							<img src="./assets/flecha-abajo.svg" alt="Down arrow" class="questions__flecha-abajo flecha-abajo"></img>
+							<img src="./assets/flecha-arriba.svg" alt="Up arrow" class="questions__flecha-arriba">
+						</div>
+						<div class="questions__answer" id="answer">
+							<p>No. Batabit es una plataforma exclusivamente para consulta de información y toma de decisiones. Todavía no ofrecemos servicios de compra o venta.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- ---------------------------------------->
+		<!-- FOOTER -->
+		<!-- ---------------------------------------->
+		<footer class="footer container">
+			<section class="links">
+				<a href="#" class="subtitle">LinkedIn</a>
+				<a href="#" class="subtitle">Crunchbase</a>
+				<a href="#" class="subtitle">Hakcernews</a>
+			</section>
+			<section class="branding">
+				<img
+					src="./assets/potato.svg"
+					alt="Second Logo Batabit"
+					class="logo-footer"
+				/>
+				<p class="copyright">® Batabit 2020</p>
+			</section>
+		</footer>
+		<!-- Scripts -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

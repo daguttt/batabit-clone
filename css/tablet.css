@@ -1,0 +1,73 @@
+/* 600px */
+@media screen and (min-width:600px) {
+   .flecha-derecha,
+   .flecha-izquierda{
+      display: none;
+   }
+   .plans-container-slider {
+      overflow: visible;
+   }
+}
+/* Ipad Pro 11 */
+@media screen and (min-width: 834px) {
+   html, body {
+      font-size: 22px;
+   }
+   .header__title {
+      max-width: 380px;
+      height: 126px;
+      margin: 0 100px;
+   }
+   .header__text {
+      max-width: 382px;
+      margin-bottom: 102px;
+   }
+   .cta__text {
+      font-size: 0.7rem;
+   }
+   .bitcoin-image {
+      padding: 0 6.25rem
+   }
+   .exchange-rates-section__text,
+   .exchange-rates-section__title {
+      width: 70%
+   }
+   .exchange__slider-container {
+      overflow: visible;
+   }
+   .exchange__card-container {
+		min-width: 250px;
+		margin: 0 2rem;
+		padding: 0
+	}
+   .exchange__card {
+      padding: 0.625rem
+   }
+   .icons img {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin-bottom: 1.1875rem;
+   }
+   .features-container {
+      width: 85%;
+   }
+   .feature-container {
+      width: 45%;
+   }
+   .image-section {
+      background-image: url(https://i.imgur.com/LVsJNOB.png);
+      max-height: 299px;
+   }
+   .plans__plan {
+      width: 30%;
+   }
+   .plans__plan--active::before {
+      top: -15%;
+      left: 27%
+
+   }
+   .questions-section__title {
+      margin: 40px 100px;
+      max-width: 380px;
+   }
+}
