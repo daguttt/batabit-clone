@@ -1,15 +1,27 @@
 /* 600px */
 @media screen and (min-width:600px) {
-   .flecha-derecha,
-   .flecha-izquierda{
-      display: none;
-   }
+   .exchange__card-container {
+		margin: 0 70px;
+      align-items: center;
+	}
+   .exchange__card {
+		min-width: 270px;
+	}
+   .commissions__title {
+		width: 75%;
+	}
    .plans-container-slider {
       overflow: visible;
    }
+   .bitcoin-image {
+      padding: 0 7rem;
+   }
+   .current--commissions {
+      width: 90%;
+	}
 }
 /* Ipad Pro 11 */
-@media screen and (min-width: 834px) {
+@media screen and (min-width: 833px) {
    html, body {
       font-size: 22px;
    }
@@ -22,11 +34,11 @@
       max-width: 382px;
       margin-bottom: 102px;
    }
+   .bitcoin-image {
+      padding: 0 11rem;
+   }
    .cta__text {
       font-size: 0.7rem;
-   }
-   .bitcoin-image {
-      padding: 0 6.25rem
    }
    .exchange-rates-section__text,
    .exchange-rates-section__title {
@@ -34,14 +46,27 @@
    }
    .exchange__slider-container {
       overflow: visible;
+      width: 70%;
    }
    .exchange__card-container {
-		min-width: 250px;
-		margin: 0 2rem;
-		padding: 0
+		margin: 0 20px;
 	}
    .exchange__card {
-      padding: 0.625rem
+      padding: 0.625rem;
+      max-height: 85%;
+
+   }
+   .commissions-container {
+      padding: 0
+   }
+   .commissions {
+      justify-items: normal;
+   }
+   .commissions__title {
+      width: 60%;
+   }
+   .flecha-derecha {
+      display: none;
    }
    .icons img {
       width: 0.75rem;

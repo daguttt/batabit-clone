@@ -6,9 +6,14 @@ html, body {
    height: 126px;
    margin: 0 300px;
 }
+.exchange__slider-container {
+   overflow: visible;
+   width: 50%;
+}
 .plans__text {
    margin: 0 12.1rem 2.2rem;
 }
+
 @media screen and (min-width: 1520px) {
    .title {
       max-width: 700px;
@@ -18,6 +23,10 @@ html, body {
    .header__text {
       max-width: 450px;
       margin-bottom: 102px;
+   }
+   .exchange__slider-container {
+      overflow: visible;
+      width: 45%;
    }
    .image-section {
       max-height: 500px;

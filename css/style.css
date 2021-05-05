@@ -133,6 +133,7 @@ body {
 /* ============================================= */
 /* Exchange */
 .exchange-rates-section {
+	position: relative;
 	background: transparent;
 }
 
@@ -148,21 +149,22 @@ body {
 }
 /* Exchange slider */
 .exchange__slider-container {
+	position: relative;
+	width: 63%;
+	max-height: 18.75rem;
 	display: flex;
-	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
+	overflow-x: hidden;
 	margin: 0 0 64px;
 	padding-bottom: 20px;
 }
 .exchange__card-container {
-	scroll-snap-align: center;
-	position: relative;
-	min-width: 220px;
-	width: 60%;
-	margin: 0 2.5rem;
-	padding: 0 1.125rem;
+	display: flex;
+	flex-direction: column;
+	width: 200%;
+	margin: 0 7px;
 }
 .exchange__card {
+	min-width: 185px;
 	display: grid;
 	grid-row-gap: 20px;
 	align-content: center;
@@ -174,20 +176,21 @@ body {
 	height: 12px;
 }
 .coins {
+	padding-left: 5px;
 	grid-template-columns: 4fr 2fr 12px;
 }
 .flecha-derecha,
 .flecha-izquierda {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	bottom: 27%;
 }
 .flecha-derecha {
-	right: -9%;
-	top: 50%;
+	right: 10%;
 }
 .flecha-izquierda {
-	left: -8%;
+	left: 10%;
+	display: none;
 }
 .card__title {
 	font-family: DM Sans;
@@ -244,6 +247,8 @@ body {
 	text-align: center;
 }
 .current {
+	width: 100%;
+	max-width: 260px;
 	padding: 8px;
 	font-family: Inter;
 	font-size: 12px;
@@ -256,17 +261,21 @@ body {
 	background: var(--soft-orange);
 }
 /* Commissions container */
+.commissions-container {
+	padding-left: 10px;
+}
 /* Commissions */
 .commissions {
 	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
 }
 .commissions__title {
-	color: var(--blue);
+	width: 83%;
 	grid-column: 2 span;
+	color: var(--blue);
 }
 .current--commissions {
 	background: var(--soft-blue);
-	margin-right: 0.875rem;
 }
 
 /* ============================================= */
@@ -550,30 +559,24 @@ body {
 /* Iphone 8 */
 @media screen and (min-width: 375px) {
 	.exchange__card-container {
-		margin: 0 5rem;
-		padding: 0;
+		margin: 0 14px;
 	}
-	.flecha-derecha {
-		right: -20%;
+	.exchange__card {
+		min-width: 200px;
 	}
-	.flecha-izquierda {
-		left: -20%;
+	.coins {
+		padding-left: 0;
+	}
+	.current--commissions {
+		background: var(--soft-blue);
 	}
 }
 /* Iphone 11 Pro Max */
 @media screen and (min-width: 414px) {
 	.exchange__card-container {
-		min-width: 250px;
-		margin: 0 4.5rem;
-		padding: 0;
+		margin: 0 40px;
 	}
-	.flecha-derecha {
-		right: -20%;
-	}
-	.flecha-izquierda {
-		left: -20%;
-	}
-	.plans__plan {
-		scroll-snap-align: none;
+	.commissions__title {
+		width: 85%;
 	}
 }

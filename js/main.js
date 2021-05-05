@@ -18,11 +18,40 @@ cta.addEventListener('click', () => {
 });
 
 // =======================================================
+// Exchange rates section
+// =======================================================
+const rightArrow = document.querySelector('#right-arrow');
+const leftArrow = document.querySelector('#left-arrow');
+const exchangeCardsContainer = document.getElementsByClassName('exchange__card-container');
+rightArrow.addEventListener('click', () => {
+    for (let key in exchangeCardsContainer) {
+        key = parseInt(key)
+        if (key !== NaN) {
+            exchangeCardsContainer[key].style.marginLeft = '-100%'
+            rightArrow.style.display = 'none';
+            leftArrow.style.display = 'inline';
+        }
+        return;
+    }
+})
+leftArrow.addEventListener('click', () => {
+    for (let key in exchangeCardsContainer) {
+        key = parseInt(key)
+        if (key !== NaN) {
+            exchangeCardsContainer[key].style.marginLeft = ''
+            leftArrow.style.display = 'none';
+            rightArrow.style.display = 'inline';
+        }
+        return;
+    }
+})
+
+// =======================================================
 // Questions section
 // =======================================================
 const questions = document.getElementsByClassName('questions__question');
 const answers = document.getElementsByClassName('questions__answer');
-const arrows = document.getElementsByClassName('questions__flechas');
+const arrowsY = document.getElementsByClassName('questions__flechas');
 const srcDownArrow = './assets/flecha-abajo.svg';
 const srcUpArrow = './assets/flecha-arriba.svg';
 const hideAnswer = (index, status) => {
@@ -71,11 +100,11 @@ for (let key in questions) {
         question.addEventListener('click', () => {
             if (status) {
                 status = hideAnswer(key, status)
-                changeArrow(arrows[key], 'down');
+                changeArrow(arrowsY[key], 'down');
                 return;
             }
             status = showAnswer(key, status);
-            changeArrow(arrows[key], 'up');
+            changeArrow(arrowsY[key], 'up');
         });
     }
 }
