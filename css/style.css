@@ -104,7 +104,10 @@ body {
 .cta:hover {
 	background: var(--light-hover);
 	box-shadow: var(--shadow-hover);
-	
+}
+.cta:active {
+	background: var(--off-white);
+	box-shadow: var(--shadow);
 }
 .cta__text {
 	color: var(--warm-black);
@@ -442,7 +445,7 @@ body {
 }
 .button__text {
 	font-family: DM Sans;
-	font-size: 15px;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 18px;
