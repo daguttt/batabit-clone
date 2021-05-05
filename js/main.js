@@ -20,55 +20,43 @@ cta.addEventListener('click', () => {
 // =======================================================
 // Questions section
 // =======================================================
-const downArrows = document.getElementsByClassName('questions__flecha-abajo');
-const upArrows = document.getElementsByClassName('questions__flecha-arriba');
+const questions = document.getElementsByClassName('questions__question');
 const answers = document.getElementsByClassName('questions__answer');
-
-const hideAnswer = (index) => {
+const arrows = document.getElementsByClassName('questions__flechas');
+const srcDownArrow = './assets/flecha-abajo.svg';
+const srcUpArrow = './assets/flecha-arriba.svg';
+const hideAnswer = (index, status) => {
     for (let key in answers) {
         if (key == index) {
             if (answers[key].style.display == 'block') {
                 // Change display to none
                 answers[key].style.display = '';
-                return;
+                status = false
+                return status;
             }
         }
     }
 }
 
-const showAnswer = (index) => {
+const showAnswer = (index, status) => {
     for (let key in answers) {
         if (key == index) {
             if (answers[key].style.display == '') {
                 // Change display to block
                 answers[key].style.display = 'block';
-                return;
+                status = true
+                return status;
             }
         }
     }
 }
-const changeArrow = (index, type) => {
+const changeArrow = (element, type) => {
     if (type == 'down') {
-        for (let key in upArrows) {
-            if (key == index) {
-                if (upArrows[key].style.display === 'inline') {
-                    upArrows[key].style.display = 'none';
-                    downArrows[key].style.display = 'inline';
-                }
-            }
-        }
+        element.setAttribute('src', srcDownArrow);
     }
     if (type == 'up') {
-        for (let key in downArrows) {
-            if (key == index) {
-                if (downArrows[key].style.display.length === 0 || downArrows[key].style.display === 'inline') {
-                    downArrows[key].style.display = 'none';
-                    upArrows[key].style.display = 'inline';
-                }
-            }
-        }
+        element.setAttribute('src', srcUpArrow);
     }
-    
 }
 const verifyIfObject = (value) => {
     if (typeof value == 'object') {
@@ -76,21 +64,19 @@ const verifyIfObject = (value) => {
     }
     return undefined;
 }
-for(let key in downArrows) {
-    let downArrow = verifyIfObject(downArrows[key]);
-    if (downArrow) {
-        downArrow.addEventListener('click', () => {
-            showAnswer(key);
-            changeArrow(key, 'up');
+for (let key in questions) {
+    let question = verifyIfObject(questions[key]);
+    if (question) {
+        let status = false;
+        question.addEventListener('click', () => {
+            if (status) {
+                status = hideAnswer(key, status)
+                changeArrow(arrows[key], 'down');
+                return;
+            }
+            status = showAnswer(key, status);
+            changeArrow(arrows[key], 'up');
         });
     }
 }
-for (let key in upArrows) {
-    let upArrow = verifyIfObject(upArrows[key]);
-    if (upArrow) {
-        upArrow.addEventListener('click', () => {
-            hideAnswer(key);
-            changeArrow(key, 'down');
-        })
-    }
-}
+
